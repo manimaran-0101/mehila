@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehila's Animated World</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .container {
+            display: none;
+            animation: fadeIn 2s ease-in-out;
+            overflow-y: auto;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        header {
+            background-color: #ffcc00;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            animation: bounceIn 1.5s ease-in-out;
+        }
+        @keyframes bounceIn {
+            0% { transform: scale(0.5); opacity: 0; }
+            70% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(1); }
+        }
+        section {
+            padding: 20px;
+        }
+        h1 {
+            color: #ff5733;
+        }
+        .favorites img {
+            width: 150px;
+            margin-right: 10px;
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+        .encouragement {
+            background-color: #e0f7fa;
+            padding: 20px;
+            border-radius: 10px;
+            animation: fadeIn 3s ease-in-out;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffcc00;
+            color: #fff;
+        }
+        /* Question Section */
+        .question-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #e0f7fa;
+            position: relative;
+            overflow: hidden;
+        }
+        .question-box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .question-box button {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #ffcc00;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .question-box button:hover {
+            background-color: #ffb300;
+        }
+        #no-btn {
+            position: relative;
+        }
+        /* Doremon and Shinchan Dancing */
+        .doremon, .shinchan {
+            position: fixed;
+            bottom: 10px;
+            width: 150px;
+            animation: dance 1.5s infinite;
+        }
+        .doremon {
+            right: 10px;
+        }
+        .shinchan {
+            left: 10px;
+        }
+        @keyframes dance {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(20px); }
+            100% { transform: translateX(0); }
+        }
+        /* Paper Spread Effect for Login */
+        .login-container {
+            display: none;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f8ff;
+        }
+        .login-box {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: paperSpread 1.5s ease-in-out;
+        }
+        @keyframes paperSpread {
+            0% { transform: scale(0.5) rotate(-10deg); opacity: 0; }
+            100% { transform: scale(1) rotate(0); opacity: 1; }
+        }
+        .login-box input {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .login-box input[type="button"] {
+            background-color: #ffcc00;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        .login-box input[type="button"]:hover {
+            background-color: #ffb300;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Question Section -->
+<div class="question-container">
+    <div class="question-box">
+        <h2>Are you Tharkuri?</h2>
+        <button onclick="showLogin()">Yes</button>
+        <button id="no-btn" onclick="moveNo()">No</button>
+    </div>
+</div>
+
+<!-- Login Section -->
+<div class="login-container">
+    <div class="login-box">
+        <h2>Login to Mehila's World</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <input type="button" value="Login" onclick="login()">
+    </div>
+</div>
+
+<!-- Main Content -->
+<div class="container">
+    <header>
+        <h1>Welcome to Mehila's World</h1>
+    </header>
+
+    <section>
+        <h2>About Mehila</h2>
+        <p>She is  Mehila, a future doctor with a heart of gold , Gem, thangowwwww,sani,Tharkuri. She might feel unlucky at times! but one day all things will be change don't worry about all of that iam or someone there for you 
+        </p>
+    </section>
+
+    <section class="favorites">
+        <h2>Favorites</h2>
+        <p>MS Dhoni</p>
+        <img src="Ms Dhoni PFP.jpeg" alt="MS Dhoni">
+        <p>Vijay</p>
+        <img src="Vijay Picture.jpeg"Vijay">
+        <p>Hacker Me</p>
+        <img src="Premium Vector Computer hacker illustration.jpeg" alt="Hacker Me">
+        <p>Pathirana</p>
+        <img src="_bjR7SCY.jpeg" alt="Pathirana">
+    </section>
+
+    <section class="encouragement">
+        <h2>Encouragement Corner</h2>
+        <p>"Believe in yourself, Mehila! The world is yours to conquer!"</p>
+    </section>
+
+    <section class="youtube">
+        <h2>HeHeHeHeHeHe</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/4Myf_qKqAmg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+    </section>
+
+    <footer>
+        <p>Created by Your Best Friend</p>
+    </footer>
+
+    <!-- Doremon and Shinchan Animation -->
+    <img src="doreman.jpeg" alt="Doremon Dancing" class="doremon" style="display:none;">
+    <img src="Sticker_ly.jpeg" alt="Shinchan Dancing" class="shinchan" style="display:none;">
+</div>
+
+<script>
+    function moveNo() {
+        var noBtn = document.getElementById('no-btn');
+        noBtn.style.left = Math.random() * 100 + 'px';
+        noBtn.style.top = Math.random() * 100 + 'px';
+    }
+
+    function showLogin() {
+        document.querySelector('.question-container').style.display = 'none';
+        document.querySelector('.login-container').style.display = 'flex';
+    }
+
+    function login() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        if (username === "mehila" && password === "mehi0101") {
+            document.querySelector('.login-container').style.display = 'none';
+            document.querySelector('.container').style.display = 'block';
+            document.body.style.overflowY = 'auto'; // Enable scrolling
+
+            // Show animations after login
+            document.querySelector('.doremon').style.display = 'block';
+            document.querySelector('.shinchan').style.display = 'block';
+        } else {
+            alert("Incorrect username or password!");
+        }
+    }
+</script>
+
+</body>
+</html>
+
